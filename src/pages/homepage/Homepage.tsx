@@ -8,4 +8,3 @@ const Homepage = () => {
 };
 
 export { Homepage };
-q
