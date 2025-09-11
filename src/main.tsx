@@ -8,7 +8,7 @@ import App from './App.tsx'
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <ThemeProvider>
+      <ThemeProvider defaultTheme="dark" storageKey="vitqe-ui-theme">
         <App />
       </ThemeProvider>
     </BrowserRouter>
