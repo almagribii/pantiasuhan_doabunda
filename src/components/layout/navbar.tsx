@@ -23,7 +23,7 @@ export function Navbar() {
       <Link to="/" className="flex items-center gap-2 font-bold">
         <img
           className="fill-primary max-h-[40px]"
-          src="/assets/logo/logo_transparant.png"
+          src="/assets/logo/logo.png"
           alt="Logo"
         />
         <span className="font-bawor text-3xl text-primary sm:inline-block">
