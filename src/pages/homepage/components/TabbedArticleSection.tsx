@@ -10,8 +10,7 @@ const tabData = [
         "Kami berkomitmen penuh untuk memastikan setiap anak mendapatkan akses pendidikan yang layak. Mulai dari pendidikan formal di sekolah hingga les tambahan dan bimbingan belajar, kami menyiapkan mereka untuk meraih cita-cita.",
         "Selain itu, kami juga mengajarkan berbagai keterampilan non-akademik, seperti melukis, musik, dan kerajinan tangan, untuk menggali bakat terpendam mereka dan mengembangkan kreativitas.",
       ],
-      image:
-        "https://images.unsplash.com/photo-1546522370-0d4810a905a5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb", // Ganti dengan URL gambar pendidikan
+      image: "/assets/homepage/slider/4.jpeg",
     },
   },
   {
@@ -23,8 +22,7 @@ const tabData = [
         "Kesehatan adalah prioritas kami. Secara berkala, kami melakukan pemeriksaan kesehatan rutin untuk memastikan setiap anak tumbuh dengan optimal. Lingkungan yang bersih dan higienis juga selalu kami jaga.",
         "Kami menyediakan asupan gizi yang seimbang setiap harinya. Dengan menu makanan yang bervariasi, kami berharap dapat memenuhi kebutuhan nutrisi mereka untuk tumbuh kembang yang sempurna.",
       ],
-      image:
-        "https://images.unsplash.com/photo-1517596853744-8c88f34f4347?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb", // Ganti dengan URL gambar kesehatan/gizi
+      image: "/assets/homepage/slider/4.jpeg",
     },
   },
   {
@@ -36,8 +34,7 @@ const tabData = [
         "Para relawan adalah pahlawan tanpa tanda jasa kami. Mereka datang dengan hati tulus untuk menemani anak-anak belajar, bermain, atau sekadar berbagi cerita. Kehadiran mereka membawa kebahagiaan dan semangat baru.",
         "Banyak cerita inspiratif yang lahir dari interaksi antara relawan dan anak-anak. Kisah-kisah ini menunjukkan bahwa kebaikan sekecil apapun dapat memberikan dampak yang luar biasa.",
       ],
-      image:
-        "https://images.unsplash.com/photo-1520108398437-024c084ac918?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb", // Ganti dengan URL gambar relawan
+      image: "/assets/homepage/slider/4.jpeg",
     },
   },
 ];
