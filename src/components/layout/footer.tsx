@@ -1,18 +1,7 @@
 import { Link } from "react-router-dom";
-import { Switch } from "../ui/switch";
 import { useTheme } from "./theme-provider";
-import { Menu, MoonIcon, SunIcon } from "lucide-react";
 
 export function Footer() {
-  const { theme, setTheme } = useTheme();
-  const isDarkMode =
-    theme === "dark" ||
-    (theme === "system" &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-      const toogleTheme = () => {
-        setTheme(isDarkMode ? "light" : "dark");
-      }
   return (
     <footer className="border-t">
       <div className="text-muted-foreground container mx-auto flex flex-col items-center justify-between px-4 py-6 text-sm md:flex-row md:px-8">
@@ -30,12 +19,6 @@ export function Footer() {
           >
             Terms of Service
           </Link>
-          <Switch 
-          variant="theme"
-          checked={isDarkMode}
-          onCheckedChange={toogleTheme}
-          IconOn={MoonIcon}
-          IconOff={SunIcon}/>
         </div>
       </div>
     </footer>
