@@ -40,7 +40,6 @@ export function Navbar() {
           IconOn={MoonIcon}
           IconOff={SunIcon}
         />
-
         <Link
           to="/donasi"
           className="text-muted-foreground hover:text-foreground transition-colors"
@@ -60,16 +59,17 @@ export function Navbar() {
           Rekening
         </Link>
         <Link
-          to="/tentang"
+          to="/artikel"
           className="text-muted-foreground hover:text-foreground transition-colors"
         >
-          Tentang Kami
+          Artikel
         </Link>
+
         <Link
           to="/faq"
           className="text-muted-foreground hover:text-foreground transition-colors"
         >
-          FAQ
+          Tentang Kami
         </Link>
       </nav>
       <div className="md:hidden">
@@ -104,13 +104,13 @@ export function Navbar() {
                 to="/about"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Tentang Kami
+                Artikel
               </Link>
               <Link
                 to="/contact"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                FAQ
+                Tentang Kami
               </Link>
             </div>
             <div className="flex h-full w-full flex-row items-end justify-between px-5 py-5">
