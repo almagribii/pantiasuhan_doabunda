@@ -46,72 +46,71 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #fff; /* Light background */
-  --foreground: #222222; /* Dark text */
-  --card: #fff; /* White card */
-  --card-foreground: #222222; /* Dark text on card */
-  --popover: #fff; /* White popover */
-  --popover-foreground: #222222; /* Dark text on popover */
-  --primary: #997856; /* Duolingo Green */
-  --primary-foreground: #222222; /* White text on primary */
-  --secondary: #e4e4e7; /* Duolingo Purple */
-  --secondary-foreground: #fff; /* White text on secondary */
-  --muted: #e6e6e6; /* Light grey muted */
-  --muted-foreground: #808080; /* Medium grey muted text */
-  --accent: #696969; /* Duolingo Blue */
-  --accent-foreground: #fff; /* Dark text on accent */
+  --background: #f0f8ff; /* Light blue background */
+  --foreground: #0A142A; /* Very dark blue-gray text */
+  --card: #ffffff; /* White card */
+  --card-foreground: #0A142A; /* Dark text on card */
+  --popover: #ffffff; /* White popover */
+  --popover-foreground: #0A142A; /* Dark text on popover */
+  --primary: #007bff; /* Main vibrant blue */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #e6f2ff; /* Very light blue */
+  --secondary-foreground: #0A142A; /* Dark text on secondary */
+  --muted: #e6f2ff; /* Muted light blue */
+  --muted-foreground: #667799; /* Muted blue-gray text */
+  --accent: #1e90ff; /* Dodger Blue for accents */
+  --accent-foreground: #ffffff; /* White text on accent */
   --destructive: #cc3333; /* Red for destructive actions */
-  --border: #ffddb8; /* Light grey border */
-  --input: #e6e6e6; /* Light grey input border */
-  --ring: #ecbb88; /* Duolingo Green for focus ring */
-  --chart-1: #ecbb88; /* Darker Duolingo Green */
-  --chart-2: #9c9c9c; /* Darker Duolingo Purple */
-  --chart-3: #0066cc; /* Darker Duolingo Blue */
-  --chart-4: #cc9900; /* Darker Duolingo Yellow */
-  --chart-5: #cc6600; /* Darker Duolingo Orange */
-  --sidebar: #333333; /* Darker sidebar */
-  --sidebar: #fafafa; /* Light sidebar background */
-  --sidebar-foreground: #3f3f46; /* Dark text on sidebar */
-  --sidebar-primary: #ecbb88; /* Duolingo Green */
-  --sidebar-primary-foreground: #fff; /* White text on sidebar primary */
-  --sidebar-accent: #e4e4e7; /* Light accent for hover */
-  --sidebar-accent-foreground: #09090b; /* Dark text on hover */
-  --sidebar-border: #e4e4e7; /* Light grey sidebar border */
-  --sidebar-ring: #ecbb88; /* Duolingo Green for sidebar focus ring */
+  --border: #b3cbe6; /* Medium blue-gray border */
+  --input: #b3cbe6; /* Light input border */
+  --ring: #007bff; /* Vibrant blue for focus ring */
+  --chart-1: #007bff;
+  --chart-2: #1e90ff;
+  --chart-3: #4d94ff;
+  --chart-4: #80bfff;
+  --chart-5: #b3d9ff;
+  --sidebar: #f0f8ff;
+  --sidebar-foreground: #0A142A;
+  --sidebar-primary: #007bff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e6f2ff;
+  --sidebar-accent-foreground: #0A142A;
+  --sidebar-border: #b3cbe6;
+  --sidebar-ring: #007bff;
 }
 
 .dark {
-  --background: #222222; /* Dark background */
-  --foreground: #fff; /* Light text */
-  --card: #323232; /* Darker card */
-  --card-foreground: #fff; /* Light text on card */
-  --popover: #323232; /* Darker popover */
-  --popover-foreground: #fff; /* Light text on popover */
-  --primary: #ecbb88; /* Darker Duolingo Green */
-  --primary-foreground: #222222; /* Dark text on primary */
-  --secondary: #9c9c9c; /* Darker Duolingo Purple */
-  --secondary-foreground: #222222; /* Light text on secondary */
-  --muted: #404040; /* Darker grey muted */
-  --muted-foreground: #999999; /* Medium light grey muted text */
-  --accent: #696969; /* Darker Duolingo Blue */
-  --accent-foreground: #fff; /* Light text on accent */
-  --destructive: #ff6666; /* Darker red for destructive actions */
-  --border: #635039; /* Darker grey border */
-  --input: #404040; /* Darker grey input border */
-  --ring: #ecbb88; /* Darker Duolingo Green for focus ring */
-  --chart-1: #ecbb88; /* Darker Duolingo Green */
-  --chart-2: #9c9c9c; /* Darker Duolingo Purple */
-  --chart-3: #0066cc; /* Darker Duolingo Blue */
-  --chart-4: #cc9900; /* Darker Duolingo Yellow */
-  --chart-5: #cc6600; /* Darker Duolingo Orange */
-  --sidebar: #333333; /* Darker sidebar */
-  --sidebar-foreground: #fff; /* Light text on sidebar */
-  --sidebar-primary: #ecbb88; /* Darker Duolingo Green */
-  --sidebar-primary-foreground: #222222; /* Dark text on sidebar primary */
-  --sidebar-accent: #696969; /* Darker Duolingo Blue */
-  --sidebar-accent-foreground: #fff; /* Light text on sidebar accent */
-  --sidebar-border: #404040; /* Darker grey sidebar border */
-  --sidebar-ring: #ecbb88; /* Darker Duolingo Green for sidebar focus ring */
+  --background: #0d1a2b; /* Dark navy background */
+  --foreground: #e0f2ff; /* Light blue text */
+  --card: #142840; /* Darker blue card */
+  --card-foreground: #e0f2ff; /* Light text on card */
+  --popover: #142840; /* Darker blue popover */
+  --popover-foreground: #e0f2ff; /* Light text on popover */
+  --primary: #4da6ff; /* Brighter blue for contrast */
+  --primary-foreground: #0d1a2b; /* Dark text on primary */
+  --secondary: #1a324f; /* Muted dark blue */
+  --secondary-foreground: #e0f2ff; /* Light text on secondary */
+  --muted: #243b55; /* Muted dark blue */
+  --muted-foreground: #8096b3; /* Light muted blue text */
+  --accent: #1e90ff; /* Vibrant accent blue */
+  --accent-foreground: #e0f2ff; /* Light text on accent */
+  --destructive: #ff6666; /* Red for destructive actions */
+  --border: #325072; /* Medium dark blue border */
+  --input: #325072; /* Darker input border */
+  --ring: #4da6ff; /* Brighter blue for focus ring */
+  --chart-1: #4da6ff;
+  --chart-2: #80bfff;
+  --chart-3: #b3d9ff;
+  --chart-4: #e6f2ff;
+  --chart-5: #e0f2ff;
+  --sidebar: #102138;
+  --sidebar-foreground: #e0f2ff;
+  --sidebar-primary: #4da6ff;
+  --sidebar-primary-foreground: #0d1a2b;
+  --sidebar-accent: #1e90ff;
+  --sidebar-accent-foreground: #e0f2ff;
+  --sidebar-border: #325072;
+  --sidebar-ring: #4da6ff;
 }
 
 /* ini untuk writing vertical di welcome card */
