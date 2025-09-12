@@ -14,6 +14,7 @@ const Homepage = () => {
         <TabbedArticleSection />
         <LocationSection />
       </div>
+      <Footer/>
     </div>
   );
 };
