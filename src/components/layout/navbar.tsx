@@ -1,7 +1,9 @@
 import { Switch } from "../ui/switch";
 import { useTheme } from "../layout/theme-provider";
 import { Link } from "react-router-dom";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { Menu, MoonIcon, SunIcon } from "lucide-react";
+import { Button } from "../ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -32,38 +34,106 @@ export function Navbar() {
       {/* Menu and toogletheme in right navbar */}
       <nav className="hidden items-center justify-center gap-6 text-sm font-medium md:flex">
         <Switch
-        variant="theme"
-        checked={isDarkMode}
-        onCheckedChange={toogleTheme}
-        IconOn={MoonIcon}
-        IconOff={SunIcon}/>
+          variant="theme"
+          checked={isDarkMode}
+          onCheckedChange={toogleTheme}
+          IconOn={MoonIcon}
+          IconOff={SunIcon}
+        />
 
-        <Link 
-        to='/donasi'
-        className="text-muted-foreground hover:text-foreground transition-colors">
+        <Link
+          to="/donasi"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
           Donasi
         </Link>
-        <Link 
-        to='/program'
-        className="text-muted-foreground hover:text-foreground transition-colors">
+        <Link
+          to="/program"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
           Program
         </Link>
-        <Link 
-        to='/rekening'
-        className="text-muted-foreground hover:text-foreground transition-colors">
+        <Link
+          to="/rekening"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
           Rekening
         </Link>
-        <Link 
-        to='/tentang'
-        className="text-muted-foreground hover:text-foreground transition-colors">
+        <Link
+          to="/tentang"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
           Tentang Kami
         </Link>
-        <Link 
-        to='/faq'
-        className="text-muted-foreground hover:text-foreground transition-colors">
+        <Link
+          to="/faq"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
           FAQ
         </Link>
       </nav>
+      <div className="md:hidden">
+        <Sheet>
+          <SheetTrigger>
+            <Button variant="default" size="icon">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right">
+            <div className="grid gap-4 px-3 py-10">
+              <Link
+                to="/translate"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Donasi
+              </Link>
+              <Link
+                to="/chatbot"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Program
+              </Link>
+              <Link
+                to="/pengenalan"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Rekening
+              </Link>
+              <Link
+                to="/about"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Tentang Kami
+              </Link>
+              <Link
+                to="/contact"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                FAQ
+              </Link>
+            </div>
+            <div className="flex h-full w-full flex-row items-end justify-between px-5 py-5">
+              {isDarkMode ? (
+                <p className="text-muted-foreground text-sm">
+                  Apakah terlalu gelap?
+                </p>
+              ) : (
+                <p className="text-muted-foreground text-sm">
+                  Apakah terlalu terang?
+                </p>
+              )}
+              <Switch
+                variant="theme"
+                checked={isDarkMode}
+                onCheckedChange={toogleTheme}
+                IconOn={MoonIcon}
+                IconOff={SunIcon}
+              />
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 }
