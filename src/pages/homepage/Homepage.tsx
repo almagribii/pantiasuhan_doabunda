@@ -1,6 +1,6 @@
 import { Footer } from "../../components/layout/footer";
 import { Navbar } from "../../components/layout/navbar";
-import ImageSlider from "./components/Slider";
+import ImageSlider from "./components/ImageSlider";
 const Homepage = () => {
   return (
     <div>
