@@ -34,9 +34,9 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative mx-auto mt-8 w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
+    <div className="relative mx-auto mt-8 w-full max-w-7xl overflow-hidden shadow-lg h-[450px]">
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex h-full transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
       >
         {images.map((image) => (
@@ -44,7 +44,7 @@ const ImageSlider = () => {
             key={image.id}
             src={image.src}
             alt={image.alt}
-            className="h-80 w-full flex-shrink-0 object-cover"
+            className="h-full w-full flex-shrink-0 object-cover"
           />
         ))}
       </div>
@@ -62,18 +62,16 @@ const ImageSlider = () => {
         {/* Arrow Next */}
         &#10095;
       </button>
-
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-       
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`h-3 w-3 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-gray-400"}`}
-            ></button>
-          ))}
-        </div>
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`h-3 w-3 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-gray-400"}`}
+          ></button>
+        ))}
       </div>
+    </div>
   );
 };
 
