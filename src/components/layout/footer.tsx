@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useTheme } from "./theme-provider";
 
 export function Footer() {
   return (

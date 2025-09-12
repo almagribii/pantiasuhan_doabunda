@@ -24,7 +24,7 @@ export function Navbar() {
           src="/assets/logo/logo_transparant.png"
           alt="Logo"
         />
-        <span className="font-bawor text-3xl text-[#88ddec] sm:inline-block">
+        <span className="font-bawor text-3xl text-primary sm:inline-block">
           Doa Bunda
         </span>
       </Link>
