@@ -1,13 +1,15 @@
 import { Switch } from "../ui/switch";
 import { useTheme } from "../layout/theme-provider";
 import { Link } from "react-router-dom";
-import { Menu, MoonIcon, SunIcon } from "lucide-react";
+import { Menu, MoonIcon, SunIcon, ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { useState } from "react";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
-
+  const [isTentangKamiDropdownOpen, setIsTentangKamiDropdownOpen] =
+    useState(false);
   const isDarkMode =
     theme === "dark" ||
     (theme === "system" &&
@@ -65,12 +67,51 @@ export function Navbar() {
           Artikel
         </Link>
 
-        <Link
-          to="/faq"
-          className="text-muted-foreground hover:text-foreground transition-colors"
+        <div
+          className="relative"
+          onMouseEnter={() => setIsTentangKamiDropdownOpen(true)}
+          onMouseLeave={() => setIsTentangKamiDropdownOpen(false)}
         >
-          Tentang Kami
-        </Link>
+          <Link
+            to="/tentang-kami"
+            className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Tentang Kami
+            <ChevronDown
+              className={`ml-1 h-4 w-4 transition-transform ${isTentangKamiDropdownOpen ? "rotate-180" : ""}`}
+            />
+          </Link>
+          {isTentangKamiDropdownOpen && (
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+              <div className="py-1">
+                <Link
+                  to="/tentang-kami/sejarah"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Sejarah
+                </Link>
+                <Link
+                  to="/tentang-kami/visi-misi"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Visi & Misi
+                </Link>
+                <Link
+                  to="/tentang-kami/tim"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Tim Kami
+                </Link>
+                <Link
+                  to="/tentang-kami/kontak"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Kontak Kami
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
       </nav>
       <div className="md:hidden">
         <Sheet>
