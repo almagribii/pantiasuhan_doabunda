@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 import { Menu, MoonIcon, SunIcon, ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
   const [isTentangKamiDropdownOpen, setIsTentangKamiDropdownOpen] =
     useState(false);
+
+  // Ini untuk timer ketika hovver dropdown
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   const isDarkMode =
     theme === "dark" ||
     (theme === "system" &&
@@ -69,8 +73,17 @@ export function Navbar() {
 
         <div
           className="relative"
-          onMouseEnter={() => setIsTentangKamiDropdownOpen(true)}
-          onMouseLeave={() => setIsTentangKamiDropdownOpen(false)}
+          onMouseEnter={() => {
+            if (timeoutRef.current) {
+              clearTimeout(timeoutRef.current);
+            }
+            setIsTentangKamiDropdownOpen(true);
+          }}
+          onMouseLeave={() => {
+            timeoutRef.current = setTimeout(() => {
+              setIsTentangKamiDropdownOpen(false);
+            }, 300);
+          }}
         >
           <Link
             to="/tentang-kami"
@@ -82,7 +95,7 @@ export function Navbar() {
             />
           </Link>
           {isTentangKamiDropdownOpen && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-36 bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50">
               <div className="py-1">
                 <Link
                   to="/tentang-kami/sejarah"
