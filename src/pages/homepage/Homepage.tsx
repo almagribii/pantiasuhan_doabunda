@@ -1,4 +1,3 @@
-import { Footer } from "../../components/layout/footer";
 import ImageSlider from "./components/ImageSlider";
 import OrphanageInfoSection from "./components/OrphanageInfoSection";
 import TabbedArticleSection from "./components/TabbedArticleSection";
@@ -12,7 +11,6 @@ const Homepage = () => {
         <TabbedArticleSection />
         <LocationSection />
       </div>
-      <Footer/>
     </div>
   );
 };

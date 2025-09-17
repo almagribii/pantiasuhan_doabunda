@@ -1,7 +1,7 @@
 export function ContactForm() {
   return (
     // Membungkus seluruh form di dalam div dengan styling card
-    <div className="container mx-auto max-w-2xl px-4 py-12 md:py-24">
+    <div className="container mx-auto max-w-4xl px-4 py-12">
       <div className="p-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         {/* Judul dan deskripsi form */}
         <div className="mb-8 text-center">
