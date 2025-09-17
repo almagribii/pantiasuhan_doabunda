@@ -5,7 +5,7 @@ export function Kontak() {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
+      <main className="">
         <ContactForm />
       </main>
     </>
